@@ -8,30 +8,65 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <style>body {background-color:#004d00;}
-			.panel-body {background:#338800;}</style>
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
+  <link href="css/education.css" rel="stylesheet">
+  <script src="js/links.js"></script>
 </head>
 
 <body>
+
+	<!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <!-- Logo -->
+      <div class="container">
+        <div class="navbar-header">
+        <a class="navbar-brand myLogo" href="#">
+         <img src="images/ReimanGardensLogo.png" />
+        </a>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- Name -->
+          <a class="navbar-brand" href="#">Christina Reiman Butterfly Wing | Education</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <!-- Links to other pages -->
+            <li class="active"><a href="#">Home</a></li> 
+            <li><a href="../statisticsPage/stats.html">Stats</a></li>      
+            <li><a href="../searchPage/searchPage-basic.htm">Search</a></li>
+            <li><a href="#search">Gallery</a></li>
+            <li><a href="#search">Plants</a></li>
+            <li><a href="/education/education.html">Learn More</a></li>
+            <li><a href="#search">Identify</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
 	<div class="container">
-		<h1>Educational Links</h1>         
 		<div class="row">
 			<div class="col-md-6">
-				<div class="panel panel-default">
+				<div class="panel panel-default" id="openWings">
 					<div class="panel-body">
-						<p>How do butterflies/moths spread their wings after emerging?</p>    
-						<img src="./openWings/Papilio-troilus-9671-for-web-300x175.jpg" alt="" style="width:150px;height:150px">
+						<p><strong>How do butterflies/moths spread their wings after emerging?</strong></p>    
+						<img src="openWings/Papilio-troilus-9671-for-web-300x175.jpg" alt="" style="width:150px;height:150px">
 					</div>
 				</div>
 			</div>
 			<div class="col-md-6">
 				<div class="panel panel-default">
 					<div class="panel-body">
-						<p>Christina Reiman Butterfly Wing Plants</p>
+						<p><strong>Christina Reiman Butterfly Wing Plants</strong></p>
 						<ul class="list-inline">
-							<li><img src="./Plants/Aechmea-Chocolate-039.jpg" alt="Moustiers Sainte Marie" style="width:150px;height:150px"></li>
-							<li><img src="./Plants/Caryota-mitis-078.jpg" alt="Moustiers Sainte Marie" style="width:150px;height:150px"></li>
-							<li><img src="./Plants/Jatropha-integerrima-016.jpg" alt="Moustiers Sainte Marie" style="width:150px;height:150px"></li>
+							<li><img src="plants/Aechmea-Chocolate-039.jpg" alt="Moustiers Sainte Marie" style="width:150px;height:150px"></li>
+							<li><img src="plants/Caryota-mitis-078.jpg" alt="Moustiers Sainte Marie" style="width:150px;height:150px"></li>
+							<li><img src="plants/Jatropha-integerrima-016.jpg" alt="Moustiers Sainte Marie" style="width:150px;height:150px"></li>
 						</ul>
 					</div>
 				</div>
@@ -39,44 +74,45 @@
 			<div class="col-md-4">
 				<div class="panel panel-default">
 					<div class="panel-body">
-						<p>How can you determine the sex of a butterfly?</p>
+						<p><strong>How can you determine the sex of a butterfly?</strong></p>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-8">
 				<div class="panel panel-default">
 					<div class="panel-body">
-						<p>What is the smallest and largest butterfly/moth found at Reiman Gardens</p>      
-						<img src="./sizes/atala-hairstreak-for-web-650x175.jpg" alt="Cinque Terre" class="img-responsive">
+						<p><strong>What is the smallest and largest butterfly/moth found at Reiman Gardens</strong></p>
+						<img src="sizes/atala-hairstreak-for-web-650x175.jpg" alt="Cinque Terre" class="img-responsive">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="panel panel-default" id="wingColors">
+					<div class="panel-body">
+						<p><strong>How do butterflies use their wing colors?</strong></p>
+						<img src="wingColors/Kallima-paralekta-9274-for-web-267x175.jpg" alt="Cinque Terre" style="width:150px;height:150px">
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="panel panel-default">
 					<div class="panel-body">
-						<p>How do butterflies use their wing colors?</p>
-						<img src="./wingColors/Kallima-paralekta-9274-for-web-267x175.jpg" alt="Cinque Terre" style="width:150px;height:150px">
+						<p><strong>The Cinque Terre: A rugged portion of coast in the Liguria region of Italy.</strong></p>
+						<img src="wingColors/Kallima-paralekta-9274-for-web-267x175.jpg" alt="Cinque Terre" style="width:150px;height:150px">
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="panel panel-default">
 					<div class="panel-body">
-						<p>The Cinque Terre: A rugged portion of coast in the Liguria region of Italy.</p>      
-						<img src="./wingColors/Kallima-paralekta-9274-for-web-267x175.jpg" alt="Cinque Terre" style="width:150px;height:150px">
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="panel panel-default">
-					<div class="panel-body">
-						<p>The Cinque Terre: A rugged portion of coast in the Liguria region of Italy.</p>      
-						<img src="./wingColors/Kallima-paralekta-9274-for-web-267x175.jpg" alt="Cinque Terre" style="width:150px;height:150px">
+						<p><strong>The Cinque Terre: A rugged portion of coast in the Liguria region of Italy.</strong></p>      
+						<img src="wingColors/Kallima-paralekta-9274-for-web-267x175.jpg" alt="Cinque Terre" style="width:150px;height:150px">
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
 </body>
 
 </html>
