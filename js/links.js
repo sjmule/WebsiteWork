@@ -8,7 +8,7 @@ $(document).ready(function() {
 	$("#gender").click(function() {
 		window.location.href = "gender/"
 	});
-	$("#size").click(function() {
+	$("#sizes").click(function() {
 		window.location.href = "sizes/"
 	});
 	$("#wingColors").click(function() {
