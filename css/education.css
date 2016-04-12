@@ -6,14 +6,23 @@
 body {
 	padding-top: 70px;
 	padding-bottom: 100px;
+	background-color: #42586E;
 }
 
 p {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans', sans-serif; color: #FFFFFF;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Oswald', sans-serif;
+}
+
+h3 {
+	color: #FFFFFF;
+}
+
+a {
+	color: #006600;
 }
 
 .myLogo { padding: 10px; }
@@ -71,18 +80,6 @@ h1, h2, h3, h4, h5, h6 {
 	color: #FFFFFF;
 }
 
-body {
-	background-color: #42586E;
-}
-
 .panel-body {
 	background-color: #617487;
-}
-
-p {
-	color: #FFFFFF;
-}
-
-h3 {
-	color: #FFFFFF;
 }

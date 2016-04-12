@@ -9,7 +9,7 @@ $(document).ready(function() {
 		window.location.href = "gender/"
 	});
 	$("#size").click(function() {
-		window.location.href = "size/"
+		window.location.href = "sizes/"
 	});
 	$("#wingColors").click(function() {
 		window.location.href = "wingColors/"
