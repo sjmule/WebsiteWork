@@ -1,2 +1,0 @@
-add search for article feature to education page
-add download content button
