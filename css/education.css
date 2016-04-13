@@ -22,10 +22,12 @@ h3 {
 }
 
 a {
-	color: #006600;
+	color: #F0AC1A;
 }
 
-.myLogo { padding: 10px; }
+.myLogo {
+	padding: 10px; 
+}
 
 .navbar-default {
 	background-color: #2C3E50;
@@ -82,4 +84,13 @@ a {
 
 .panel-body {
 	background-color: #617487;
+}
+
+.alignleft { 
+	float: left; 
+}
+
+.wp-image {
+	padding-right: 15px;
+	padding-bottom: 20px;
 }
