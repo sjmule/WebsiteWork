@@ -7,9 +7,9 @@
 	<h1>Welcome to the Library</h1>
 	<div ng-app="myApp" ng-controller="myController">
 		<table>
-			<th>Shelf</th> <th>Shelf</th>
+			<th ng-repeat="bookshelf in bookShelves| orderBy:'name'">{{bookShelf.name}}</th>
 			<tr ng-repeat="book in books">
-				<td ng-repeat="val in book"> {{val}}</td>
+				<td ng-repeat="book.name in book"> {{val}}</td>
 			</tr>
 		</table>
 	</div>
