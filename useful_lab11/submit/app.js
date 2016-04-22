@@ -1,6 +1,7 @@
-angular.module('myApp', [])
-.controller('myController', function($scope) {
-	$scope.booksShelves =
+var app = angular.module('myApp', ['ngRoute']);
+
+app.controller('myController', function($scope) {
+	$scope.bookShelves =
 		[ {name: "Shelf1",
 			books: [ {name: "Book1", status: "Available", title: "1984", author: "George Orwell"},
 					 {name: "Book2", status: "Checked out", title: "A Brief History of Time", author: "Stephen Hawking"},
@@ -12,7 +13,7 @@ angular.module('myApp', [])
 					 {name: "Book8", status: "Checked out", title: "Catch-22", author: "Joseph Heller"},
 					 {name: "Book9", status: "Available", title: "Charlie and the Chocolate Factory", author: "Roald Dahl"},
 					 {name: "Book10", status: "Checked out", title: "Diary of a Wimpy Kid", author: "Jeff Kinney"},
-					 {name: "Book11", status: "Available", title: "Dune", author: "Frank Herbert"} ];
+					 {name: "Book11", status: "Available", title: "Dune", author: "Frank Herbert"} ]
 		  },
 		  {name: "Shelf2",
 		  	books: [ {name: "Book12", status: "Available", title: "Fahrenheit 451", author: "Ray Bradbury"},
@@ -25,7 +26,7 @@ angular.module('myApp', [])
 					 {name: "Book19", status: "Checked out", title: "Me Talk Pretty One Day", author: "David Sedaris"},
 					 {name: "Book20", status: "Available", title: "Middlesex: A Novel", author: "Jeffery Eugenides"},
 					 {name: "Book21", status: "Available", title: "Midnight's Children: A Novel", author: "Salman Rushdie"},
-					 {name: "Book22", status: "Available", title: "Persepolis: The Story of a Childhood", author: "Marjane Satarpi"} ];
+					 {name: "Book22", status: "Available", title: "Persepolis: The Story of a Childhood", author: "Marjane Satarpi"} ]
 		  },
 		  {name: "Shelf3",
 		  	books: [ {name: "Book23", status: "Available", title: "Portnoy's Complaint", author: "Philip Roth"},
@@ -35,6 +36,17 @@ angular.module('myApp', [])
 					 {name: "Book27", status: "Checked out", title: "The Book Thief", author: "Markus Zusak"},
 					 {name: "Book28", status: "Checked out", title: "The Corrections: A Novel", author: "Jonathan Franzen"},
 					 {name: "Book39", status: "Available", title: "The Devil in the White City: Murder, Magic, and Maddness at the Fair That Changed America", author: "Erik Larson"},
-					 {name: "Book40", status: "Available", title: "The Diary of a Young Girl", author: "Anne Frank, Otto H. Frank"} ];
-		  } ];
+					 {name: "Book40", status: "Available", title: "The Diary of a Young Girl", author: "Anne Frank, Otto H. Frank"} ]
+		  } ]
+});
+
+app.config(function ($routeProvider) {
+    $routeProvider.when("/book", {
+        controller: "book",
+        templateUrl: "book.html"
+    });
+});
+
+app.controller('book', function($scope) {
+
 });
