@@ -1,7 +1,7 @@
 var app = angular.module('myApp', ['ngRoute']);
 
-app.controller('myController', function($scope) {
-	$scope.bookShelves =
+app.service('bookCollection', function() {
+	var bookShelves =
 		[ {name: "Shelf1",
 			books: [ {name: "Book1", status: "Available", title: "1984", author: "George Orwell"},
 					 {name: "Book2", status: "Checked out", title: "A Brief History of Time", author: "Stephen Hawking"},
@@ -38,15 +38,44 @@ app.controller('myController', function($scope) {
 					 {name: "Book39", status: "Available", title: "The Devil in the White City: Murder, Magic, and Maddness at the Fair That Changed America", author: "Erik Larson"},
 					 {name: "Book40", status: "Available", title: "The Diary of a Young Girl", author: "Anne Frank, Otto H. Frank"} ]
 		  } ]
+	this.getBookShelves = function() {
+		return bookShelves;
+	}
 });
 
 app.config(function ($routeProvider) {
-    $routeProvider.when("/book", {
+    $routeProvider.when("/book/:bookName/:shelf", {
         controller: "book",
         templateUrl: "book.html"
     });
 });
 
-app.controller('book', function($scope) {
+app.controller('myController', function ($scope, bookCollection) {
+	$scope.bookShelves = bookCollection.getBookShelves();
+});
 
+app.controller('book', function ($scope, $routeParams, bookCollection) {
+	$scope.shelf = $routeParams.shelf;
+	$scope.nam = $routeParams.bookName;
+	var bookShelves = angular.fromJson(bookCollection.getBookShelves());
+	var found = false;
+	for ( i = 0; i < bookShelves.length; i++)
+	{
+		if (bookShelves[i].name == $routeParams.shelf)
+		{
+			for ( j = 0; j < bookShelves[i].books.length; j++)
+			{
+				if (bookShelves[i].books[j].name == $routeParams.bookName)
+				{
+					$scope.title = bookShelves[i].books[j].title;
+					$scope.author = bookShelves[i].books[j].author;
+					$scope.status = bookShelves[i].books[j].status;
+					found = true;
+					break;
+				}
+			}
+			if ( found == true )
+				break;
+		}
+	}
 });
